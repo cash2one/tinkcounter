@@ -6,9 +6,10 @@ import tornado.autoreload
 import database
 import json
 import datetime
+import sys
 
 
-db = database.Database()
+db = database.Database(sys.argv[1])
 db.connect()
 
 class ApiCount(tornado.web.RequestHandler):
