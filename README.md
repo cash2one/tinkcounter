@@ -16,3 +16,4 @@ Thanks very much for all the plugins blow:
 
 1. [Charts.js](http://www.chartjs.org/)
 2. [glDatePicker](http://glad.github.io/glDatePicker)
+3. [jQuery](https://jquery.com/)
