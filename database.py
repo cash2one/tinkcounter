@@ -64,7 +64,11 @@ class Database(object):
 
     def count_tweet(self, date_beg, date_end):
         with self.__conn:
+            try:
             cur = self.__conn.cursor()
+            except:
+                self.connect()
+                cur = self.__conn.cursor()
             table = self.__config.get('mysql', 'table')
             sql = """SELECT COUNT(*) FROM {table} WHERE `tweet_time` >=
                 '{date_beg}' AND `tweet_time` < '{date_end}'""".format(

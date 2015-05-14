@@ -17,6 +17,7 @@ class Twitter(object):
 
     def __init__(self, config_file):
         self.__db = database.Database(config_file)
+        self.__db.connect()
         config = ConfigParser.RawConfigParser()
 
         # initilize twitter client
